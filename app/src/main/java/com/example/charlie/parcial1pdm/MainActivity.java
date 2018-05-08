@@ -3,28 +3,23 @@ package com.example.charlie.parcial1pdm;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.view.menu.MenuView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.View;
-import android.support.v4.app.Fragment;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 
-import java.util.List;
+import com.example.charlie.parcial1pdm.Adapters.ViewPagerAdapter;
+import com.example.charlie.parcial1pdm.Fragments.FragmentContacto;
+import com.example.charlie.parcial1pdm.Fragments.FragmentFavorito;
+import com.example.charlie.parcial1pdm.Fragments.FragmentLlamada;
 
 public class MainActivity extends AppCompatActivity {
-
+ImageButton siguiente;
 
     private TabLayout tabLayout;
     private ViewPager viewPager;
@@ -57,10 +52,9 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(2).setIcon(R.drawable.ic_favoritos);
 
 
-
-
-
     }
+
+
 
     private void preguntaPermisos(){
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_CALL_LOG)

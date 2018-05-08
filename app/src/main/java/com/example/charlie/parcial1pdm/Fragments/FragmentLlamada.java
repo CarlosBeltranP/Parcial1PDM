@@ -1,7 +1,6 @@
-package com.example.charlie.parcial1pdm;
+package com.example.charlie.parcial1pdm.Fragments;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.provider.CallLog;
@@ -14,6 +13,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.charlie.parcial1pdm.Adapters.LlamadasRecilerViewAdapter;
+import com.example.charlie.parcial1pdm.Models.ModelLLamadas;
+import com.example.charlie.parcial1pdm.R;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -62,8 +65,9 @@ public class FragmentLlamada extends Fragment {
 
         int nombre =  cursor.getColumnIndex(CallLog.Calls.CACHED_NAME);
         int numero =  cursor.getColumnIndex(CallLog.Calls.NUMBER);
-       // int duracion = cursor.getColumnIndex(CallLog.Calls.DURATION);
+
         int fecha  = cursor.getColumnIndex(CallLog.Calls.DATE);
+
 
 
 

@@ -1,4 +1,4 @@
-package com.example.charlie.parcial1pdm;
+package com.example.charlie.parcial1pdm.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

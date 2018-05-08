@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Parcial1PDM</string>
+    <string name="title_activity_info_contacto">InfoContacto</string>
 </resources>

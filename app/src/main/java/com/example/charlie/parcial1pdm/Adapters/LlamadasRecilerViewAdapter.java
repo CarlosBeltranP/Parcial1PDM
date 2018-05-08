@@ -1,24 +1,24 @@
-package com.example.charlie.parcial1pdm;
+package com.example.charlie.parcial1pdm.Adapters;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
-import android.provider.CallLog;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.example.charlie.parcial1pdm.Contacto;
+import com.example.charlie.parcial1pdm.Fragments.FragmentLlamada;
+import com.example.charlie.parcial1pdm.MainActivity;
+import com.example.charlie.parcial1pdm.Models.ModelLLamadas;
+import com.example.charlie.parcial1pdm.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,11 +63,11 @@ public class LlamadasRecilerViewAdapter extends RecyclerView.Adapter<LlamadasRec
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, final int position) {
-        final TextView nombre, numero, fecha, numero2;
+        final TextView nombre, numero, fecha, foto;
 
         nombre = holder.nombre;
         fecha = holder.fecha;
-        numero2 = holder.numero;
+
         numero = holder.numero;
 
 
@@ -106,7 +106,8 @@ public class LlamadasRecilerViewAdapter extends RecyclerView.Adapter<LlamadasRec
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView nombre, numero, fecha;
-        Button inf_contacto, llamada;
+        ImageButton inf_contacto;
+        Button llamada;
 
         ArrayList<Contacto> contacts = new ArrayList<Contacto>();
         Context context;
@@ -117,12 +118,13 @@ public class LlamadasRecilerViewAdapter extends RecyclerView.Adapter<LlamadasRec
 
 
             //TEXTVIEWS
+
             nombre = (TextView) itemView.findViewById(R.id.tv_nombre_contacto);
             numero = (TextView) itemView.findViewById(R.id.tv_numero_contacto);
             fecha = (TextView) itemView.findViewById(R.id.tv_fecha);
 
             //BOTONES
-            inf_contacto = (Button) itemView.findViewById(R.id.btn_contacto);
+            inf_contacto = (ImageButton) itemView.findViewById(R.id.ibtn_contacto);
             llamada = (Button) itemView.findViewById(R.id.boton_llamar);
 
 

@@ -2,18 +2,35 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/backgroundFragment">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <EditText
+            android:id="@+id/et_buscar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:drawableLeft="@drawable/ic_buscar"
+            android:textColor="#9e9e9e">
+
+        </EditText>
+
+    </android.support.v7.widget.Toolbar>
+
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_contactos"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"
-        android:scrollbarSize="4dp"
+        android:scrollbarSize="5dp"
         android:layout_marginRight="8dp"
         android:scrollbarThumbVertical="@drawable/scrollbar">
 
     </android.support.v7.widget.RecyclerView>
-
 
 </LinearLayout>
